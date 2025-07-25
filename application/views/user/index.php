@@ -7,8 +7,8 @@
     <div class="card-body">
       <a href="<?= base_url('user-tambah') ?>" class="btn btn-md btn-primary">Tambah</a>
       <br><br>
-      <div class="table">
-        <table class="table" id="table-1">
+      <div class="table-responsive">
+        <table class="table table-striped" id="table-1">
           <thead>
             <tr>
               <th>No</th>
