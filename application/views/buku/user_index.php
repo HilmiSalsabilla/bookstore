@@ -32,9 +32,7 @@
             <div class="col-12 col-sm-6 col-md-6 col-lg-2">
               <article class="article article-style-b">
                 <div class="article-header" style="height: 280px;">
-                  <center>
-                    <img src="<?= base_url('assets/upload/'. $isi -> foto_buku) ?>" style="width: 13em;">
-                  </center>
+                  <img src="<?= base_url('assets/upload/'. $isi -> foto_buku) ?>" style="width: 100;">
                 </div>
                 <div class="article-details">
                   <div class="article-title">
