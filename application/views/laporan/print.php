@@ -37,43 +37,47 @@
   <title>Laporan Penjualan</title>
 </head>
 <body onload="window.print()">
-  <div>
-    <h2 style="text-align:center ;">
-      Laporan Penjualan Buku<br>
-      <?php echo convertBulan($bulan) ?>, <?php echo $tahun ?><br>
-      Status : <?php echo $status ?>
-    </h2>
+  <div class="container-fluid">
+    <div class="card card-primary">
+      <div class="card-body">
+        <h2 style="text-align:center ;">
+          Laporan Penjualan Buku<br>
+          <?php echo convertBulan($bulan) ?>, <?php echo $tahun ?><br>
+          Status : <?php echo $status ?>
+        </h2>
+      </div>
+      <hr style="border:2px solid black ;"><br>
+      <table border="1" style="width:100% ;border-collapse:collapse;">
+        <thead>
+          <th>No</th>
+          <th>Kode Order</th>
+          <th>Tanggal Order</th>
+          <th>User</th>
+          <th>Nama Buku</th>
+          <th>Jumlah Order</th>
+          <th>Total Harga</th>
+        </thead>
+        <tbody>
+          <?php $total = 0; ?>
+          <?php foreach ($order as $key => $value): ?>
+            <tr>
+              <td><?php echo $key+1 ?></td>
+              <td><?php echo $value->kode_order ?></td>
+              <td><?php echo date('d-m-Y',strtotime($value->tgl_order)) ?></td>
+              <td><?php echo $value->nama ?></td>
+              <td><?php echo $value->nama_buku ?></td>
+              <td><?php echo $value->jumlah ?></td>
+              <td>Rp. <?php echo number_format($value->total_harga) ?></td>
+            </tr>
+          <?php $total += $value->total_harga; ?>
+          <?php endforeach; ?>
+            <tr>
+              <th colspan="6">Total</th>
+              <th>Rp. <?php echo number_format($total) ?></th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <hr style="border:2px solid black ;"><br>
-  <table border="1" style="width:100% ;border-collapse:collapse;">
-    <thead>
-      <th>No</th>
-      <th>Kode Order</th>
-      <th>Tanggal Order</th>
-      <th>User</th>
-      <th>Nama Buku</th>
-      <th>Jumlah Order</th>
-      <th>Total Harga</th>
-    </thead>
-    <tbody>
-      <?php $total = 0; ?>
-      <?php foreach ($order as $key => $value): ?>
-        <tr>
-          <td><?php echo $key+1 ?></td>
-          <td><?php echo $value->kode_order ?></td>
-          <td><?php echo date('d-m-Y',strtotime($value->tgl_order)) ?></td>
-          <td><?php echo $value->nama ?></td>
-          <td><?php echo $value->nama_buku ?></td>
-          <td><?php echo $value->jumlah ?></td>
-          <td>Rp. <?php echo number_format($value->total_harga) ?></td>
-        </tr>
-      <?php $total += $value->total_harga; ?>
-      <?php endforeach; ?>
-        <tr>
-          <th colspan="6">Total</th>
-          <th>Rp. <?php echo number_format($total) ?></th>
-        </tr>
-    </tbody>
-  </table>
 </body>
 </html>
