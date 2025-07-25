@@ -6,7 +6,7 @@
   <div class="section-body">
     <div class="card card-primary">
       <div class="card-body">
-        <a href="<?= base_url('user-tambah') ?>" class="btn btn-md btn-primary">Tambah</a>
+        <a href="<?= base_url('user-tambah') ?>" class="btn btn-sm btn-primary">Tambah</a>
         <br><br>
         <div class="table-responsive">
           <table class="table table-striped" id="table-1">
@@ -37,8 +37,8 @@
                 <td class="text-center"><span class="badge <?= $value -> status == 'aktif' ?'badge-light':'badge-info' ?>"><?= $value -> status ?></span></td>
                 <td class="text-center"><span class="badge <?= $value -> level == 'admin' ?'badge-primary':'badge-warning' ?> "></span><?= $value -> level ?></td>
                 <td>
-                  <a href="<?= base_url('user-hapus/'.$value -> id_user) ?>" class="btn btn-md btn-danger">Hapus</a>
-                  <a href="<?= base_url('user-aktifasi/'.$value -> id_user.'/'.$value -> status) ?>" class="btn btn-md btn-primary">Aktifasi</a>
+                  <a href="<?= base_url('user-hapus/'.$value -> id_user) ?>" class="btn btn-sm btn-danger">Hapus</a>
+                  <a href="<?= base_url('user-aktifasi/'.$value -> id_user.'/'.$value -> status) ?>" class="btn btn-sm btn-primary">Aktifasi</a>
                 </td>
               </tr>
               <?php endforeach ?>

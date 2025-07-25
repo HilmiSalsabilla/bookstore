@@ -49,7 +49,7 @@
                   </td>
                   <td>
                     <?php if ($value->status_order == 'Pending') : ?>
-                      <button onclick="bukti('<?php echo $value->kode_order ?>')" type="button" class="btn btn-md btn-primary trigger--fire-modal-1" id="modal-1">Upload Bukti Pembayaran</button>
+                      <button onclick="bukti('<?php echo $value->kode_order ?>')" type="button" class="btn btn-sm btn-primary trigger--fire-modal-1" id="modal-1">Upload Bukti Pembayaran</button>
                     <?php elseif(($value->status_order == 'Dikonfirmasi' && $value->nomor_resi != null)) : ?>
                       <i class="text-primary" style="font-size: 12px">Nomor Resi : <?php echo $value->nomor_resi ?></i>
                     <?php else : ?>

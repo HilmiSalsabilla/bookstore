@@ -49,7 +49,7 @@
             </div>
             <div class="col-md-3">
               <label for="">&nbsp;</label>
-              <button type="submit" name="filter" class="btn btn-md btn-primary btn-block">Filter Data</button>
+              <button type="submit" name="filter" class="btn btn-sm btn-primary btn-block">Filter Data</button>
             </div>
           </div>
         </form>

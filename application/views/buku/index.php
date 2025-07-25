@@ -6,7 +6,7 @@
   <div class="section-body">
     <div class="card card-primary">
       <div class="card-body">
-        <a href="<?= base_url('buku-tambah') ?>" class="btn btn-md btn-primary">Tambah</a><br><br>
+        <a href="<?= base_url('buku-tambah') ?>" class="btn btn-sm btn-primary">Tambah</a><br><br>
         <div class="table-responsive">
           <table class="table table-striped" id="table-1">
             <thead>
@@ -52,4 +52,3 @@
     </div>
   </div>
 </div>
-

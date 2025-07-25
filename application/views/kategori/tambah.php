@@ -12,7 +12,7 @@
             <input type="text" nama="nama_kategori" class="form-control">
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-md btn-primary">Simpan</button>
+            <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
           </div>
         </form>
       </div>

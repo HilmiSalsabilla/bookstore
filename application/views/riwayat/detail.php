@@ -87,7 +87,7 @@
           
         <div class="text-md-right">
           <div class="float-lg-left mb-lg-0 mb-3">
-            <a class="btn btn-danger btn-icon icon-left" href="<?php echo base_url('Riwayat') ?>">Kembali</a>
+            <a class="btn btn-sm btn-danger btn-icon icon-left" href="<?php echo base_url('Riwayat') ?>">Kembali</a>
           </div>
           <!-- <button class="btn btn-warning btn-icon icon-left"><i class="fas fa-print"></i> Print</button> -->
         </div>
