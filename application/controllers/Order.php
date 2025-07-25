@@ -32,7 +32,10 @@ class Order extends CI_Controller {
 
 	public function user_order_store() {
 		$buku = $this->db->get_where('tb_buku', ['id_buku' => $_POST['id_buku']])->row();
-		$total_harga = $_POST['qty'] * $buku->harga;
+		$qty = intval($this->input->post('qty'));
+    $harga = intval($buku->harga);
+
+    $total_harga = $qty * $harga;
 		$params = [
 			'kode_order' => 'ORD'.rand(),
 			'id_user' => $_SESSION['id_user'],

@@ -78,7 +78,7 @@
     </div>
     <div class="card-body">
       <div class="table-responsive">
-        <table border='1' class="table table-striped" id=>
+        <table border='0.5' class="table table-striped" id=>
           <thead>
             <tr>
               <th>No</th>
