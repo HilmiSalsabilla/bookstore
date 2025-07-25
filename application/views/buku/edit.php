@@ -3,7 +3,7 @@
 </div>
 
 <div class="section-body">
-  <form method="POST" action="<?php echo base_url('buku-edit')?>" enctype="multipart/form-data">
+  <form method="POST" action="<?php echo base_url('buku-update')?>" enctype="multipart/form-data">
     <input type="hidden" name="id_buku" value="<?= $buku -> id_buku?>">
     <div class="form-group">
       <label for="kategori">Kategori</label>
