@@ -1,7 +1,7 @@
 <div class="section-header">
-  <h1>Kelola Buku</h1>
+  <h4>Kelola Buku</h4>
 </div>
-
+<hr>
 <div class="section-body">
   <div class="card card-primary">
     <div class="card-body">
@@ -9,15 +9,15 @@
       <div class="table-responsive">
         <table class="table table-striped" id="table-1">
           <thead>
-            <th>NO</th>
+            <th>No</th>
             <th>Kategori</th>
-            <th>Nama Buku</th>
-            <th>Foto Buku</th>
+            <th>Nama</th>
+            <th>Foto</th>
             <th>Deskripsi</th>
             <th>Penulis</th>
             <th>Penerbit</th>
             <th>Tahun</th>
-            <th>Jumlah Halaman</th>
+            <th>Halaman</th>
             <th>Harga</th>
             <th>Stok</th>
             <th>Aksi</th>

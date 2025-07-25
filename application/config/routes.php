@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Dashboard/index';
+$route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -59,7 +59,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login']['post'] = 'Login/proses_login';
 $route['logout']['get'] = 'Login/logout';
 $route['register']['get'] = 'Login/register';
-$route['store_register']['post'] = 'Login/store_register';
+$route['register-store']['post'] = 'Login/store_register';
 
 //
 // Dashboard
@@ -82,7 +82,7 @@ $route['kategori']['get'] = 'Kategori/index';
 $route['kategori-tambah']['get'] = 'Kategori/tambah';
 $route['kategori-store']['post'] = 'Kategori/store';
 $route['kategori-edit/(:num)']['get'] = 'Kategori/edit/$1';
-$route['kategori-edit']['post'] = 'Kategori/edit_store';
+$route['kategori-update']['post'] = 'Kategori/edit_store';
 $route['kategori-hapus/(:num)']['get'] = 'Kategori/hapus/$1';
 
 //
@@ -92,7 +92,7 @@ $route['buku']['get'] = 'Buku/index';
 $route['buku-tambah']['get'] = 'Buku/tambah';
 $route['buku-store']['post'] = 'Buku/store';
 $route['buku-edit/(:num)']['get'] = 'Buku/edit/$1';
-$route['buku-edit']['post'] = 'Buku/edit_store';
+$route['buku-update']['post'] = 'Buku/edit_store';
 $route['buku-hapus/(:num)']['get'] = 'Buku/hapus/$1';
 
 //
@@ -100,16 +100,16 @@ $route['buku-hapus/(:num)']['get'] = 'Buku/hapus/$1';
 //
 $route['order']['get'] = 'Order/index';
 $route['order-verifikasi/(:any)']['get'] = 'Order/verifikasi/$1';
-$route['order-verifikasi']['post'] = 'Order/verifikasi_store';
-$route['input-resi']['post'] = 'Order/input_resi';
-$route['input-detail/(:any)']['get'] = 'Order/detail/$1';
+$route['order-verifikasi-store']['post'] = 'Order/verifikasi_store';
+$route['order-input-resi']['post'] = 'Order/input_resi';
+$route['order-detail/(:any)']['get'] = 'Order/detail/$1';
 $route['order-hapus/(:num)']['get'] = 'Order/hapus/$1';
 
 //
 // Order Pengguna
 //
 $route['daftar-buku']['get'] = 'Buku/user_index';
-$route['buku-detail-order/(:num)']['get'] = 'Order/user_order/$1';
+$route['buku-order-detail/(:num)']['get'] = 'Order/user_order/$1';
 $route['buku-order-store']['post'] = 'Order/user_order_store';
 
 //
@@ -117,8 +117,8 @@ $route['buku-order-store']['post'] = 'Order/user_order_store';
 //
 $route['riwayat']['get'] = 'Riwayat/index';
 $route['riwayat-selesai/(:any)']['get'] = 'Riwayat/selesai/$1';
-$route['upload-bukti']['post'] = 'Riwayat/upload_bukti';
-$route['detail-order/(:any)']['get'] = 'Riwayat/detail_order/$1';
+$route['riwayat-upload-bukti']['post'] = 'Riwayat/upload_bukti';
+$route['riwayat-detail/(:any)']['get'] = 'Riwayat/detail_order/$1';
 
 //
 // Laporan

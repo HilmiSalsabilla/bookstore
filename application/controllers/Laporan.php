@@ -25,7 +25,6 @@ class Laporan extends CI_Controller {
     $data['tahun'] = $tahun;
       
     $this->load->view('template/header');
-    $this->load->view('template/sidebar');
     $this->load->view('laporan/index', $data);
     $this->load->view('template/footer');
   }

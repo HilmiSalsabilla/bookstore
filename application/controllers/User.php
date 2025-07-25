@@ -7,7 +7,6 @@ class User extends CI_Controller {
 		$data['user'] = $this->db->get('tb_user')->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('user/index', $data);
 		$this->load->view('template/footer');
 	}
@@ -21,7 +20,6 @@ class User extends CI_Controller {
 
 	public function tambah() {
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('user/tambah');
 		$this->load->view('template/footer');
 	}

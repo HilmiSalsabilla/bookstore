@@ -12,7 +12,6 @@ class Riwayat extends CI_Controller {
 		$data['riwayat'] = $this->db->get()->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('riwayat/index', $data);
 		$this->load->view('template/footer');
 	}
@@ -62,7 +61,6 @@ class Riwayat extends CI_Controller {
 		$data['order'] = $this->db->get()->row();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('riwayat/detail', $data);
 		$this->load->view('template/footer');
 	}

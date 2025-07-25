@@ -7,7 +7,6 @@ class Kategori extends CI_Controller {
 		$data['kategori'] = $this->db->get('tb_kategori')->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('kategori/index', $data);
 		$this->load->view('template/footer');
 	}
@@ -21,7 +20,6 @@ class Kategori extends CI_Controller {
 
 	public function tambah() {
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('kategori/tambah');
 		$this->load->view('template/footer');
 	}
@@ -50,7 +48,6 @@ class Kategori extends CI_Controller {
 		$data['kategori'] = $this->db->get_where('tb_kategori', ['id_kategori' => $id_kategori])->row();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('kategori/edit', $data, FALSE);
 		$this->load->view('template/footer');	
 	}
@@ -65,7 +62,6 @@ class Kategori extends CI_Controller {
 			//validation gagal
 			$data['kategori'] = $this->db->get_where('tb_kategori', ['id_kategori' => $id_kategori])->row();
 			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
 			$this->load->view('kategori/edit', $data, FALSE);
 			$this->load->view('template/footer');	
 		}else{

@@ -20,19 +20,59 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a href="<?= base_url('dashboard') ?>" class="navbar-brand">Book Store</a>
-    <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarMain" 
-            aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle Navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a href="<?= base_url('dashboard') ?>" class="navbar-brand"><b>Book Store</b></a>
 
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav mr-auto">
         <?php if($this->session->userdata('level') == 'admin'): ?>
-        <li class="nav-item"></li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
+          <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'user' ? 'active' : '' ?>">
+          <a href="<?= base_url('user') ?>" class="nav-link">Management User</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'kategori' ? 'active' : '' ?>">
+          <a href="<?= base_url('kategori') ?>" class="nav-link">Kategori Buku</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'buku' ? 'active' : '' ?>">
+          <a href="<?= base_url('buku') ?>" class="nav-link">Buku</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'order' ? 'active' : '' ?>">
+          <a href="<?= base_url('order') ?>" class="nav-link">Order</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'laporan' ? 'active' : '' ?>">
+          <a href="<?= base_url('laporan') ?>" class="nav-link">Laporan</a>
+        </li>
+        <?php elseif($this->session->userdata('level') == 'user'): ?>
+        <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
+          <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'daftar-buku' ? 'active' : '' ?>">
+          <a href="<?= base_url('daftar-buku') ?>" class="nav-link">Daftar Buku</a>
+        </li>
+        <li class="nav-item <?= $this->uri->segment(1) == 'riwayat' ? 'active' : '' ?>">
+          <a href="<?= base_url('riwayat') ?>" class="nav-link">Riwayat Order</a>
+        </li>
+        <?php endif ?>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a href="" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+            <img src="<?= base_url('/assets/img/avatar/avatar-1.png') ?>" class="rounded-circle" width="30" height="30" alt="Avatar">
+            Hi, <?= $this->session->userdata('nama') ?? 'user'; ?>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a href="" class="dropdown-item"><i class="far fa-user"></i> Profile</a>
+            <a href="" class="dropdown-item"><i class="fas fa-bolt"></i> Activities</a>
+            <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a href="<?= base_url('logout') ?>" class="dropdown-item text-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
-  
-</body>
-</html>
+
+  <div class="container-fluid mt-4">

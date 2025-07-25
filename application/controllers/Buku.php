@@ -10,7 +10,6 @@ class Buku extends CI_Controller {
 		$data['buku'] = $this->db->get()->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('buku/index', $data);
 		$this->load->view('template/footer');
 	}
@@ -26,7 +25,6 @@ class Buku extends CI_Controller {
 		$data['kategori'] = $this->db->get('tb_kategori')->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('buku/tambah', $data);
 		$this->load->view('template/footer');
 	}
@@ -63,7 +61,6 @@ class Buku extends CI_Controller {
 		if($this->form_validation->run() == FALSE){
 			//validation gagal
 			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
 			$this->load->view('buku/tambah');
 			$this->load->view('template/footer');	
 		}else{
@@ -124,7 +121,6 @@ class Buku extends CI_Controller {
 		$data['kategori'] = $this->db->get('tb_kategori')->result(); 
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('buku/edit', $data, FALSE);
 		$this->load->view('template/footer');
 	}
@@ -163,7 +159,6 @@ class Buku extends CI_Controller {
 			//validation gagal
 			$data['buku'] = $this->db->get_where('tb_buku', ['id_buku' => $id_buku])->row();
 			$this->load->view('template/header');
-			$this->load->view('template/sidebar');
 			$this->load->view('buku/edit', $data, FALSE);
 			$this->load->view('template/footer');	
 		}else{
@@ -237,7 +232,6 @@ class Buku extends CI_Controller {
 		$data['kategori'] = $this->db->get('tb_kategori')->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('buku/user_index', $data);
 		$this->load->view('template/footer');
 	}

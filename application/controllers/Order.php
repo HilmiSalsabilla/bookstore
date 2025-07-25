@@ -11,7 +11,6 @@ class Order extends CI_Controller {
 		$data['order'] = $this->db->get()->result();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('order/index', $data);
 		$this->load->view('template/footer');
 	}
@@ -27,7 +26,6 @@ class Order extends CI_Controller {
 		$data['buku'] = $this->db->get_where('tb_buku', ['id_buku' => $id])-> row();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('buku/user_order', $data);
 		$this->load->view('template/footer');
 	}
