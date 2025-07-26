@@ -53,7 +53,7 @@
 
 				<?php if($this->session->userdata('level') == 'user') : ?>
 					<div class="hero text-white hero-bg-image hero-bg-parallax"
-						style="background-image: url('<?php echo base_url('assets/img/unsplash/dashboard.jpg'); ?>'); background-size: cover; background-position: center;">
+						style="background-image: url('<?php echo base_url('assets/img/unsplash/blue-background.jpg'); ?>'); background-size: cover; background-position: center;">
 						<div class="hero-inner p-5">
 							<h3>Welcome, <?php echo $this->session->userdata('nama') ?></h3>
 							<p class="lead">Silakan jelajahi koleksi kami, klik tombol di bawah untuk melihat daftar buku.</p>
