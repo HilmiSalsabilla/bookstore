@@ -49,7 +49,7 @@
                   </td>
                   <td>
                     <?php if ($value->status_order == 'Pending') : ?>
-                      <button onclick="bukti('<?php echo $value->kode_order ?>')" type="button" class="btn btn-sm btn-primary trigger--fire-modal-1" id="modal-1">Upload Bukti Pembayaran</button>
+                      <button onclick="bukti('<?php echo $value->kode_order ?>')" type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modalUploadBukti">Upload Bukti Pembayaran</button>
                     <?php elseif(($value->status_order == 'Dikonfirmasi' && $value->nomor_resi != null)) : ?>
                       <i class="text-primary" style="font-size: 12px">Nomor Resi : <?php echo $value->nomor_resi ?></i>
                     <?php else : ?>
@@ -60,6 +60,31 @@
               <?php endforeach; ?>
             </tbody>
           </table>
+          
+          <!-- Modal Upload Bukti Pembayaran -->
+          <div class="modal fade" id="modalUploadBukti" tabindex="-1" role="dialog" aria-labelledby="modalUploadLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <form action="<?= base_url('riwayat-upload-bukti') ?>" method="post" enctype="multipart/form-data">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Bukti Pembayaran</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="hidden" name="kode_order" id="kode_order">
+                    <div class="form-group">
+                      <label for="bukti_bayar">Pilih File Bukti Pembayaran</label>
+                      <input type="file" name="bukti_bayar" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
