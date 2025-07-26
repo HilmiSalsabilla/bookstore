@@ -64,7 +64,6 @@ class User extends CI_Controller {
 			$this->db->update('tb_user', ['status' => 'aktif'], ['id_user' => $id_user]);
 		$this->session->set_flashdata('sukses','User sudah diaktifasi dan bisa dipakai untuk login.');
 		}
-
 		
 		redirect('user','refresh');
 	}

@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller {
 
 		$data['total_buku'] = $this->db->count_all('tb_buku');
 
-		$this->db->where('status_order','dikonfirmasi');
+		$this->db->where('status_order','Dikonfirmasi');
 		$data['total_order'] = $this->db->count_all_results('tb_order');
 
 		$data['bulan'] = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Des'];

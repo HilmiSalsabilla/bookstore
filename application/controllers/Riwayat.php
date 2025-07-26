@@ -46,7 +46,7 @@ class Riwayat extends CI_Controller {
 	}
 
 	public function selesai($kode_order) {
-		$this->db->update('tb_order', ['status_order' => 'selesai'], ['kode_order' => $kode_order]);
+		$this->db->update('tb_order', ['status_order' => 'Selesai'], ['kode_order' => $kode_order]);
 		$this->session->set_flashdata('sukses','Pesanan selesai.');
 		redirect('riwayat','refresh');
 

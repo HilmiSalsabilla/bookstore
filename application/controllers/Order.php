@@ -53,7 +53,7 @@ class Order extends CI_Controller {
 	public function verifikasi($kode_order) {
 		//ubah status
 		$data = [
-			'status_order' => 'dikonfirmasi'
+			'status_order' => 'Dikonfirmasi'
 		];
 		$this->db->update('tb_order', $data, ['kode_order' => $kode_order]);
 		$this->session->set_flashdata('sukses','Berhasil dikonfirmasi.');
