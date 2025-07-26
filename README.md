@@ -101,15 +101,3 @@ MIT License. Bebas digunakan dan dimodifikasi.
 ---
 
 Made with ❤️ by [Hilmi Salsabilla](https://github.com/HilmiSalsabilla)
-
-````
-
----
-
-Kamu bisa langsung salin file ini ke dalam file `README.md` di root folder project GitHub-mu, lalu `commit & push`:
-
-```bash
-git add README.md
-git commit -m "add README"
-git push origin main
-````
