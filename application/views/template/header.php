@@ -25,34 +25,34 @@
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav mr-auto">
         <?php if($this->session->userdata('level') == 'admin'): ?>
-        <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
-          <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'user' ? 'active' : '' ?>">
-          <a href="<?= base_url('user') ?>" class="nav-link">Management User</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'kategori' ? 'active' : '' ?>">
-          <a href="<?= base_url('kategori') ?>" class="nav-link">Kategori Buku</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'buku' ? 'active' : '' ?>">
-          <a href="<?= base_url('buku') ?>" class="nav-link">Buku</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'order' ? 'active' : '' ?>">
-          <a href="<?= base_url('order') ?>" class="nav-link">Order</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'laporan' ? 'active' : '' ?>">
-          <a href="<?= base_url('laporan') ?>" class="nav-link">Laporan</a>
-        </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
+            <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'user' ? 'active' : '' ?>">
+            <a href="<?= base_url('user') ?>" class="nav-link">Management User</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'kategori' ? 'active' : '' ?>">
+            <a href="<?= base_url('kategori') ?>" class="nav-link">Kategori Buku</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'buku' ? 'active' : '' ?>">
+            <a href="<?= base_url('buku') ?>" class="nav-link">Buku</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'order' ? 'active' : '' ?>">
+            <a href="<?= base_url('order') ?>" class="nav-link">Order</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'laporan' ? 'active' : '' ?>">
+            <a href="<?= base_url('laporan') ?>" class="nav-link">Laporan</a>
+          </li>
         <?php elseif($this->session->userdata('level') == 'user'): ?>
-        <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
-          <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'daftar-buku' ? 'active' : '' ?>">
-          <a href="<?= base_url('daftar-buku') ?>" class="nav-link">Daftar Buku</a>
-        </li>
-        <li class="nav-item <?= $this->uri->segment(1) == 'riwayat' ? 'active' : '' ?>">
-          <a href="<?= base_url('riwayat') ?>" class="nav-link">Riwayat Order</a>
-        </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'dashboard' ? 'active' : '' ?>">
+            <a href="<?= base_url('dashboard') ?>" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'daftar-buku' ? 'active' : '' ?>">
+            <a href="<?= base_url('daftar-buku') ?>" class="nav-link">Daftar Buku</a>
+          </li>
+          <li class="nav-item <?= $this->uri->segment(1) == 'riwayat' ? 'active' : '' ?>">
+            <a href="<?= base_url('riwayat') ?>" class="nav-link">Riwayat Order</a>
+          </li>
         <?php endif ?>
       </ul>
 
