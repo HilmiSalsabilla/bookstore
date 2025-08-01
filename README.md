@@ -1,10 +1,9 @@
+# 📚 BookStore – Web Aplikasi Manajemen Toko Buku
+BookStore adalah aplikasi web sederhana berbasis [CodeIgniter 3](https://codeigniter.com/) yang digunakan untuk mengelola data toko buku, termasuk user login, register, dan manajemen data buku.
 
 ---
 
 ```markdown
-# 📚 BookStore – Web Aplikasi Manajemen Toko Buku
-
-BookStore adalah aplikasi web sederhana berbasis [CodeIgniter 3](https://codeigniter.com/) yang digunakan untuk mengelola data toko buku, termasuk user login, register, dan manajemen data buku.
 
 ## 🚀 Fitur Utama
 
@@ -25,8 +24,6 @@ BookStore adalah aplikasi web sederhana berbasis [CodeIgniter 3](https://codeign
 
 ## 📂 Struktur Direktori
 
-```
-
 bookstore/
 ├── application/
 │   ├── controllers/
@@ -40,6 +37,8 @@ bookstore/
 ├── system/
 ├── index.php
 └── .htaccess
+
+```
 
 ## ⚙️ Cara Instalasi
 
